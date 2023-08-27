@@ -1,0 +1,32 @@
+<div class="transactions">
+  <div class="title" style="font-weight: bold">Records with all data</div>
+  <div class="transaction-wrapper">
+    <!-- <div>Sr.No.</div>
+    <div class="title">Title</div>
+    <div class="price">Price</div>
+    <div class="shop-location">Lng & Lat</div>
+    <div class="status">Topic</div> -->
+
+    <div class="transaction" *ngFor="let o of objects; let i = index">
+      <div>{{ i + 1 }}</div>
+      <div class="title">{{ o.country }}</div>
+      <div class="price">{{ o.city }}</div>
+      <div class="shop-location">
+        <div class="shop">{{ o.citylng }}</div>
+        <div class="location">{{ o.citylat }}</div>
+      </div>
+      <div class="status" *ngIf="!(o.topic == 'null')">{{ o.topic }}</div>
+      <div class="status" *ngIf="o.topic == 'null'">No Topic</div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+
+  [ngClass]="{
+          confirmed: transaction.status === 'confirmed',
+          pending: transaction.status === 'pending',
+          shipped: transaction.status === 'shipped'
+        }"
+
+ -->

@@ -1,0 +1,127 @@
+<div class="main">
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <div class="col-header">
+              <span>Intensity</span>&nbsp;
+              <input
+                (keyup)="searchFilter()"
+                #intensityVar
+                placeholder="Search Intensity"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Likelihood</span>&nbsp;
+              <input
+                (keyup)="searchFilter()"
+                #likelihoodVar
+                placeholder="Search Likelihood"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Relevance</span>&nbsp;
+              <input
+                (keyup)="searchFilter()"
+                #relevenceVar
+                placeholder="Search Relevance"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Year</span>&nbsp;
+              <input
+                (keyup)="searchFilter()"
+                #yearVar
+                placeholder="Search Year"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Country</span>&nbsp;
+              <input
+                (keyup)="searchFilter()"
+                #countryVar
+                placeholder="Search Country"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Topics</span>&nbsp;
+              <input
+                (keyup)="searchFilter()"
+                #topicVar
+                placeholder="Search Topics"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>City</span>&nbsp;
+              <input
+                (keyup)="searchFilter()"
+                #cityVar
+                placeholder="Search City"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Region</span>&nbsp;
+              <input
+                (keyup)="searchFilter()"
+                #regionVar
+                placeholder="Search Region"
+                type="text"
+                name=""
+                id=""
+              />
+            </div>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody class="table-body">
+        <tr *ngFor="let d of tempDataArray">
+          <td>{{ d.intensity }}</td>
+          <td>{{ d.likelihood }}</td>
+          <td>{{ d.relevance }}</td>
+          <td>{{ d.end_year }}</td>
+          <td>{{ d.country }}</td>
+          <td>{{ d.topic }}</td>
+          <td>{{ d.city }}</td>
+          <td>{{ d.region }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,181 @@
+.top-section {
+  @media only screen and (max-width: 1600px) {
+    width: 1200px; // 960px; old
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1500px) {
+    width: 880px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1400px) {
+    width: 800px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 680px;
+    /* Adjusted width for smaller screens */
+  }
+}
+
+.middle-section {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 1600px) {
+    width: 1200px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1500px) {
+    width: 880px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1400px) {
+    width: 800px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 680px;
+    /* Adjusted width for smaller screens */
+  }
+
+  .widget {
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #939393;
+
+    &.left {
+      width: 945px;
+      /* Adjusted width for smaller screens */
+
+      @media only screen and (max-width: 1600px) {
+        width: 990px;
+        /* Adjusted width for smaller screens */
+      }
+
+      @media only screen and (max-width: 1500px) {
+        width: 345px;
+        /* Adjusted width for smaller screens */
+      }
+
+      @media only screen and (max-width: 1400px) {
+        width: 295px;
+        /* Adjusted width for smaller screens */
+      }
+
+      @media only screen and (max-width: 1200px) {
+        width: 245px;
+        /* Adjusted width for smaller screens */
+      }
+    }
+
+    &.right {
+      width: 490px;
+      /* Adjusted width for smaller screens */
+    }
+  }
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 1600px) {
+    width: 1200px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1500px) {
+    width: 880px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1400px) {
+    width: 800px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 680px;
+    /* Adjusted width for smaller screens */
+  }
+
+  .widget {
+    height: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #939393;
+
+    &.left {
+      width: 700px;
+      /* Adjusted width for smaller screens */
+
+      @media only screen and (max-width: 1600px) {
+        width: 700px;
+        /* Adjusted width for smaller screens */
+      }
+
+      @media only screen and (max-width: 1500px) {
+        width: 345px;
+        /* Adjusted width for smaller screens */
+      }
+
+      @media only screen and (max-width: 1400px) {
+        width: 295px;
+        /* Adjusted width for smaller screens */
+      }
+
+      @media only screen and (max-width: 1200px) {
+        width: 245px;
+        /* Adjusted width for smaller screens */
+      }
+    }
+
+    &.right {
+      width: 520px;
+      /* Adjusted width for smaller screens */
+    }
+  }
+}
+
+.lower-section {
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 1600px) {
+    width: 1200px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1500px) {
+    width: 880px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1400px) {
+    width: 800px;
+    /* Adjusted width for smaller screens */
+  }
+
+  @media only screen and (max-width: 1200px) {
+    width: 680px;
+    /* Adjusted width for smaller screens */
+  }
+
+  .widget {
+    height: 400px;
+    width: 1000px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: 5px 5px 5px #939393;
+  }
+}

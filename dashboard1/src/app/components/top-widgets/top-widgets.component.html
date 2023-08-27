@@ -1,0 +1,39 @@
+<div class="widget-container">
+  <div class="widget green">
+    <div class="icon">
+      <fa-icon [icon]="faLocation"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top"> {{ mySet.size }} </div>
+      <div class="bottom">Countries</div>
+    </div>
+  </div>
+  <div class="widget yellow">
+    <div class="icon">
+      <fa-icon [icon]="faShop"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top"> {{ mySet1.size }} </div>
+      <div class="bottom">Cities</div>
+    </div>
+  </div>
+  <div class="widget red">
+    <div class="icon">
+      <fa-icon [icon]="faBoxes"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top"> {{ getRegions().size }} </div>
+      <div class="bottom">Region</div>
+    </div>
+  </div>
+  <div class="widget blue">
+    <div class="icon">
+      <fa-icon [icon]="faMoneyBill"></fa-icon>
+    </div>
+    <div class="value">
+      <div class="top"> {{ data.length }} </div>
+      <div class="bottom">Total Records</div>
+    </div>
+  </div>
+</div>
+
