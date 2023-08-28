@@ -14,6 +14,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ChartModule } from 'angular-highcharts';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFiveComponent } from './components/component-five/component-five.component';
+import { FormsModule } from '@angular/forms';
+import { SearchfilterPipe } from './pipe/searchfilter.pipe';
+import { SearchfiltertopicPipe } from './pipe/searchfiltertopic.pipe';
+import { SearchfiltercityPipe } from './pipe/searchfiltercity.pipe';
+import { SearchfilterregionPipe } from './pipe/searchfilterregion.pipe';
+import { SearchfilteryearPipe } from './pipe/searchfilteryear.pipe';
 
 @NgModule({
   declarations: [
@@ -27,8 +33,19 @@ import { ComponentFiveComponent } from './components/component-five/component-fi
     ComponentThreeComponent,
     ComponentFourComponent,
     ComponentFiveComponent,
+    SearchfilterPipe,
+    SearchfiltertopicPipe,
+    SearchfiltercityPipe,
+    SearchfilterregionPipe,
+    SearchfilteryearPipe,
   ],
-  imports: [BrowserModule, FontAwesomeModule, ChartModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FontAwesomeModule,
+    ChartModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -85,7 +85,6 @@ export class ComponentTwoComponent implements OnInit {
     this._api.getDataForPie().subscribe({
       next: (data: any) => {
         this.pieData = data;
-        console.log(this.pieData);
         this.createChart();
       },
       error: (err: any) => {},

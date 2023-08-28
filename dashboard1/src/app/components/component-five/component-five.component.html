@@ -1,66 +1,24 @@
 <div class="main">
   <div class="table-wrapper">
+    <!-- <div class="searchbox">
+      <label for="search"><b>Search Record</b></label
+      >&nbsp;
+      <input
+        [(ngModel)]="searchValue"
+        type="text"
+        class="search"
+        placeholder="Type country name here"
+        id="search"
+      />
+    </div> -->
     <table>
       <thead>
         <tr>
           <th>
             <div class="col-header">
-              <span>Intensity</span>&nbsp;
-              <input
-                (keyup)="searchFilter()"
-                #intensityVar
-                placeholder="Search Intensity"
-                type="text"
-                name=""
-                id=""
-              />
-            </div>
-          </th>
-          <th>
-            <div class="col-header">
-              <span>Likelihood</span>&nbsp;
-              <input
-                (keyup)="searchFilter()"
-                #likelihoodVar
-                placeholder="Search Likelihood"
-                type="text"
-                name=""
-                id=""
-              />
-            </div>
-          </th>
-          <th>
-            <div class="col-header">
-              <span>Relevance</span>&nbsp;
-              <input
-                (keyup)="searchFilter()"
-                #relevenceVar
-                placeholder="Search Relevance"
-                type="text"
-                name=""
-                id=""
-              />
-            </div>
-          </th>
-          <th>
-            <div class="col-header">
-              <span>Year</span>&nbsp;
-              <input
-                (keyup)="searchFilter()"
-                #yearVar
-                placeholder="Search Year"
-                type="text"
-                name=""
-                id=""
-              />
-            </div>
-          </th>
-          <th>
-            <div class="col-header">
               <span>Country</span>&nbsp;
               <input
-                (keyup)="searchFilter()"
-                #countryVar
+                [(ngModel)]="searchValue"
                 placeholder="Search Country"
                 type="text"
                 name=""
@@ -72,8 +30,7 @@
             <div class="col-header">
               <span>Topics</span>&nbsp;
               <input
-                (keyup)="searchFilter()"
-                #topicVar
+                [(ngModel)]="searchValueTopic"
                 placeholder="Search Topics"
                 type="text"
                 name=""
@@ -85,8 +42,7 @@
             <div class="col-header">
               <span>City</span>&nbsp;
               <input
-                (keyup)="searchFilter()"
-                #cityVar
+                [(ngModel)]="searchValueCity"
                 placeholder="Search City"
                 type="text"
                 name=""
@@ -97,29 +53,60 @@
           <th>
             <div class="col-header">
               <span>Region</span>&nbsp;
+              <input [(ngModel)]="searchValueRegion" placeholder="Search Region" type="text" name="" id="" />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Intensity</span>&nbsp;
+              <input placeholder="Search Intensity" type="text" name="" id="" />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Likelihood</span>&nbsp;
               <input
-                (keyup)="searchFilter()"
-                #regionVar
-                placeholder="Search Region"
+                placeholder="Search Likelihood"
                 type="text"
                 name=""
                 id=""
               />
             </div>
           </th>
+          <th>
+            <div class="col-header">
+              <span>Relevance</span>&nbsp;
+              <input placeholder="Search Relevance" type="text" name="" id="" />
+            </div>
+          </th>
+          <th>
+            <div class="col-header">
+              <span>Year</span>&nbsp;
+              <input [(ngModel)]="searchValueYear" placeholder="Search Year" type="number" name="" id="" />
+            </div>
+          </th>
         </tr>
       </thead>
 
       <tbody class="table-body">
-        <tr *ngFor="let d of tempDataArray">
-          <td>{{ d.intensity }}</td>
-          <td>{{ d.likelihood }}</td>
-          <td>{{ d.relevance }}</td>
-          <td>{{ d.end_year }}</td>
+        <tr
+          *ngFor="
+            let d of tempDataArray
+              | searchfilter : searchValue
+              | searchfiltertopic : searchValueTopic
+              | searchfiltercity : searchValueCity
+              | searchfilterregion: searchValueRegion
+              
+          "
+        >
           <td>{{ d.country }}</td>
           <td>{{ d.topic }}</td>
           <td>{{ d.city }}</td>
           <td>{{ d.region }}</td>
+          <td>{{ d.intensity }}</td>
+          <td>{{ d.likelihood }}</td>
+          <td>{{ d.relevance }}</td>
+          <td>{{ d.end_year }}</td>
         </tr>
       </tbody>
     </table>

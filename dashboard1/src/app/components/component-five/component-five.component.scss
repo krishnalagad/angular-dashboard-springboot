@@ -16,6 +16,17 @@
   overflow-y: auto; // Add vertical scrollbar if content exceeds height
 }
 
+.searchbox{
+  width: 100%;
+  margin-bottom: 5px;
+  margin-top: 6px;
+  .search{
+    padding: 4px 420px;
+    
+  }
+  
+}
+
 .col-header {
   display: flex;
   align-items: center;
