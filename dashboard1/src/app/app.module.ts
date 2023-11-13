@@ -20,6 +20,7 @@ import { SearchfiltertopicPipe } from './pipe/searchfiltertopic.pipe';
 import { SearchfiltercityPipe } from './pipe/searchfiltercity.pipe';
 import { SearchfilterregionPipe } from './pipe/searchfilterregion.pipe';
 import { SearchfilteryearPipe } from './pipe/searchfilteryear.pipe';
+import { ComponentSixComponent } from './components/component-six/component-six.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SearchfilteryearPipe } from './pipe/searchfilteryear.pipe';
     SearchfiltercityPipe,
     SearchfilterregionPipe,
     SearchfilteryearPipe,
+    ComponentSixComponent,
   ],
   imports: [
     BrowserModule,
